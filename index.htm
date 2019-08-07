@@ -18,47 +18,82 @@
     <title>Looney Tunes RPG!</title>
   </head>
   <body>
-    <h1 class="text-center">Looney Tunes RPG!</h1>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-          <h4>Select your toon!</h4>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div id="toonList">
-
-              <div id="bugsBunny" class="toonContainer toonClick bg-gray">
-                <span>Bugs Bunny</span>
-                <img src="./assets/images/bugsBunny.jpg" class="img-thumbnail" alt="Bugs Bunny">
-                <span id="bugsBunnyHP">120 HP</span>
+    <div id="wrap">
+      <h1 class="text-center">Looney Tunes RPG!</h1>
+      <div class="container-fluid gameplaySection">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <h4 id="characterSelectText">Select your toon!</h4>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div id="toonList">
+                <div id="bugsBunny" class="toonContainer toonClick bg-gray" data-character-index="0">
+                  <span>Bugs Bunny</span>
+                  <img src="./assets/images/bugsBunny.jpg" class="img-thumbnail" alt="Bugs Bunny">
+                  <span id="bugsBunnyHP">120 HP</span>
+                </div>
+                <div id="marvinMartian" class="toonContainer toonClick bg-gray" data-character-index="1">
+                    <span>Marvin the Martain</span>
+                    <img src="./assets/images/marvinMartian.jpg" class="img-thumbnail" alt="Marvin the Martain">
+                    <span id="marvinMartianHP">100 HP</span>
+                </div>
+                <div id="daffyDuck" class="toonContainer toonClick bg-gray" data-character-index="2">
+                    <span>Daffy Duck</span>
+                    <img src="./assets/images/daffyDuck.jpg" class="img-thumbnail" alt="Daffy Duck">
+                    <span id="daffyDuckHP">130 HP</span>
+                </div>
+                <div id="foghornLeghorn" class="toonContainer toonClick bg-gray" data-character-index="3">
+                    <span>Foghorn Leghorn</span>
+                    <img src="./assets/images/foghornLeghorn.jpg" class="img-thumbnail" alt="Foghorn Leghorn">
+                    <span id="foghornLeghornHP">150 HP</span>
+                </div>
+                <div id="granny" class="toonContainer toonClick bg-gray" data-character-index="4">
+                    <span>Granny</span>
+                    <img src="./assets/images/granny.jpg" class="img-thumbnail" alt="Granny">
+                    <span id="grannyHP">110 HP</span>
+                </div>
               </div>
-              <div id="marvinMartian" class="toonContainer toonClick bg-gray">
-                  <span>Marvin the Martain</span>
-                  <img src="./assets/images/marvinMartian.jpg" class="img-thumbnail" alt="Marvin the Martain">
-                  <span id="marvinMartianHP">100 HP</span>
-              </div>
-              <div id="daffyDuck" class="toonContainer toonClick bg-gray">
-                  <span>Daffy Duck</span>
-                  <img src="./assets/images/daffyDuck.jpg" class="img-thumbnail" alt="Daffy Duck">
-                  <span id="daffyDuckHP">130 HP</span>
-              </div>
-              <div id="foghornLeghorn" class="toonContainer toonClick bg-gray">
-                  <span>Foghorn Leghorn</span>
-                  <img src="./assets/images/foghornLeghorn.jpg" class="img-thumbnail" alt="Foghorn Leghorn">
-                  <span id="foghornLeghornHP">150 HP</span>
-              </div>
-              <div id="granny" class="toonContainer toonClick bg-gray">
-                  <span>Granny</span>
-                  <img src="./assets/images/granny.jpg" class="img-thumbnail" alt="Granny">
-                  <span id="grannyHP">110 HP</span>
-              </div>
-              
             </div>
           </div>
+        </div> <!--row 1-->
+        <hr>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <h2>Battle Zone!</h2>
+          </div>
         </div>
-      </div>
-    </div>
-
+        <div class="row">
+          <!-- Battle area -->
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+            <h2>Your toon!</h2>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <!-- User character -->
+              <div id="yourToon"></div>
+            </div>
+          </div>
+          <!-- Attack button -->
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+            <button id="attackBtn" class="btn-danger btn-lg attackBtn text-center">Attack!</button>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+            <h2>Your Opponent</h2>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <!-- User character -->
+            <div id="yourEnemy"></div>
+          </div>
+        </div> <!--row 2-->
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-center">
+            <br />
+            <div id="gameOver"></div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+        </div> <!--row 3-->
+      </div> <!--GameplaySection-->
+      <div id="push"></div>
+    </div> <!--wrap-->
+    <div id="footer"></div>
     <!-- Optional JavaScript -->
     <script type="text/JavaScript" src="./assets/javascript/game.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
