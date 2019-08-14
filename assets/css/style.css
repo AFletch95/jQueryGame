@@ -13,5 +13,23 @@ img {
 	display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
+/* #yourCharacter {
+	display: inline-block;
+	width: 200px;
+	border: solid 4px black;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	border-radius: 7px;
+	
+}
+
+#yourEnemy{
+	display: inline-block;
+	width: 200px;
+	border: solid 4px black;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	border-radius: 7px;
+	
+} */
