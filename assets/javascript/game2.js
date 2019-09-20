@@ -54,7 +54,8 @@ var fighterFoghornLeghorn = new fighter('Foghorn Leghorn',150,15,15,'../images/f
 var fighterGranny = new fighter('Granny',110,18,18,'../images/granny.jpg');
 
 // on click attack button
-$attackBtn.on('click',function(){
+$attackBtn.on('click',function(event){
+  event.preventDefault();
   if(retry){
     reset();
   }
@@ -127,7 +128,7 @@ function reset(){
 }
 
 // on click bugs bunny character
-$fighterBugsBunny.on('click', function(){
+$document.on('click',"#fighterBugsBunny", function(){
   if(!fighterChosen){
     // hitPoints = fighterBugsBunny.HP;
     // currentAttackPower = fighterBugsBunny.attackPower;
@@ -148,7 +149,7 @@ $fighterBugsBunny.on('click', function(){
   }
 })
 // on click marvin the martian character
-$fighterMarvinTheMartian.on('click', function(){
+$document.on('click', "#fighterMarvinTheMartian",function(){
   if(!fighterChosen){
     // hitPoints = fighterMarvinTheMartian.HP;
     // currentAttackPower = fighterMarvinTheMartian.attackPower;
@@ -169,7 +170,7 @@ $fighterMarvinTheMartian.on('click', function(){
   }
 })
 // on click daffy duck character
-$fighterDaffyDuck.on('click', function(){
+$document.on('click',"#fighterMarvinTheMartian" ,function(){
   if(!fighterChosen){
     // hitPoints = fighterDaffyDuck.HP;
     // currentAttackPower = fighterDaffyDuck.attackPower;
@@ -190,7 +191,7 @@ $fighterDaffyDuck.on('click', function(){
   }
 })
 // on click Foghorn Leghorn character
-$fighterFoghornLeghorn.on('click', function(){
+$document.on('click',"#fighterFoghornLeghorn" ,function(){
   if(!fighterChosen){
     // hitPoints = fighterFoghornLeghorn.HP;
     // currentAttackPower = fighterFoghornLeghorn.attackPower;
@@ -211,7 +212,7 @@ $fighterFoghornLeghorn.on('click', function(){
   }
 })
 // on click Granny character
-$fighterGranny.on('click', function(){
+$document.on('click',"#fighterGranny" , function(){
   if(!fighterChosen){
     // hitPoints = fighterGranny.HP;
     // currentAttackPower = fighterGranny.attackPower;
